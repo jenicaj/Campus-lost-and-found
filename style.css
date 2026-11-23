@@ -1,0 +1,288 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #222;
+}
+
+/* Navigation */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #4f46e5;
+}
+
+.logo span {
+    color: #111827;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #4f46e5;
+}
+
+/* Hero */
+
+.hero {
+    text-align: center;
+    padding: 90px 20px;
+    background: linear-gradient(135deg, #eef2ff, #e0e7ff);
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    color: #1e1b4b;
+}
+
+.hero p {
+    font-size: 17px;
+    color: #555;
+}
+
+.hero-buttons {
+    margin-top: 25px;
+}
+
+/* Buttons */
+
+.btn {
+    display: inline-block;
+    padding: 12px 22px;
+    background: #4f46e5;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.btn:hover {
+    background: #3730a3;
+}
+
+.secondary {
+    background: white;
+    color: #4f46e5;
+    border: 1px solid #4f46e5;
+}
+
+/* Statistics */
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+.stat-box {
+    background: white;
+    padding: 25px;
+    width: 200px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+}
+
+.stat-box h2 {
+    color: #4f46e5;
+    font-size: 30px;
+}
+
+.stat-box p {
+    margin-top: 8px;
+    color: #666;
+}
+
+/* Items */
+
+.items-section {
+    padding: 50px 8%;
+}
+
+.items-section h2,
+.report-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+.filters {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.filters input,
+.filters select {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: white;
+}
+
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.item-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+    transition: 0.3s;
+}
+
+.item-card:hover {
+    transform: translateY(-5px);
+}
+
+.item-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    background: #e5e7eb;
+}
+
+.item-content {
+    padding: 20px;
+}
+
+.item-content h3 {
+    margin-bottom: 10px;
+}
+
+.item-content p {
+    color: #666;
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.status {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status.Lost {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.status.Found {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.delete-btn {
+    background: #ef4444;
+    color: white;
+    border: none;
+    padding: 9px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Report form */
+
+.report-section {
+    background: white;
+    padding: 60px 8%;
+}
+
+#itemForm {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#itemForm input,
+#itemForm select,
+#itemForm textarea {
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+#itemForm textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #1e1b4b;
+    color: white;
+}
+
+/* Responsive */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .filters {
+        flex-direction: column;
+    }
+
+    .stats {
+        gap: 12px;
+    }
+
+    .stat-box {
+        width: 140px;
+    }
+}
